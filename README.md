@@ -3,6 +3,10 @@
 ![3](https://user-images.githubusercontent.com/86317658/132115507-230a1df7-98c7-4ef5-9ead-6e23e2190e49.png)
 ![2](https://user-images.githubusercontent.com/86317658/132115510-0de1bb66-6aa6-4f28-935d-fc30c342cc14.png)
 ___
+- :fire: luiggiyantas@gmail.com
+- :octocat:[Mi segundo repositorio](https://github.com/LuiggiCF/SistemaEstacionamiento "LuiggiCF")
+- :globe_with_meridians: <https://www.facebook.com/yantas.luiggi>
+___
 ### Modo Oscuro
 ![4](https://user-images.githubusercontent.com/86317658/132115611-f9bbfa17-d987-46a0-8ece-7adac4918043.png)
 ![5](https://user-images.githubusercontent.com/86317658/132115612-120519a5-0494-4614-b1a8-9ca82f2949ee.png)
