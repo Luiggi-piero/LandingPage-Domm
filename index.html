@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Estilos css -->
+    <link rel="stylesheet" href="styles/style-home.css">
+    <link rel="stylesheet" href="styles/style-navigation.css">
+    <link rel="stylesheet" href="styles/style-contact.css">
+    <!-- Font awesome -->
+    <link rel="stylesheet" href="recursos/font-awesome/css/all.min.css">
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,900&family=Open+Sans&family=Roboto:wght@500&family=Poppins&display=swap" rel="stylesheet">
+
+    <title>Hamburguesas Domm</title>
+</head>
+
+<body>
+
+    <!-- Area de navegacion -->
+    <div class="navigation">
+        <div class="banner">
+            <!-- <img src="img/banner.jpg" alt="banner.jpg" class="cover"> -->
+            <video class="cover" autoplay>
+                <source src="video/Bbq.mp4" type="video/mp4">
+            </video>
+        </div>
+        <div class="navLink">
+            <div class="mode">
+                <img src="img/moon.png" alt="moon/sun" id="icon">
+            </div>
+            <ul>
+                <li><a href="#" class="menu-home">Principal</a></li>
+                <!-- <li><a href="#" class="menu-">About</a></li>
+                <li><a href="#" class="menu-">Services</a></li>
+                <li><a href="#" class="menu-">Portafolio</a></li> -->
+                <li><a href="#" class="menu-contact">Contáctanos</a></li>
+            </ul>
+
+        </div>
+    </div>
+
+    <!-- Fin del area de navegacion -->
+
+    <!-- Home -->
+    <div class="home">
+        <nav>
+            <div class="toggle"></div>
+        </nav>
+
+        <div class="info">
+            <h1><span> Hamburguesas </span> Domm</h1>
+            <p class="info-corta">Promoción de invierno <br> Obtén nuestro cupón y disfuta del 2X1 este fin de semana<br> <b>CUPÓN VÁLIDO POR 24HRS</b> </p>
+            <a href="">Descargar cupón</a>
+        </div>
+
+        <div class="img-box">
+            <img src="img/blob1.svg" alt="blob1.svg" class="back-img" id="blob">
+            <img src="img/burger.png" alt="coffee.png" class="main-img" style="width: 600px; height: 600px;">
+        </div>
+
+        <div class="social-links">
+            <!-- <a href=""><i class="fab fa-linkedin-in"></i></a> -->
+            <a href=""><i class="fab fa-facebook-f"></i></a>
+            <a href=""><i class="fab fa-instagram"></i></a>
+            <a href=""><i class="fab fa-whatsapp"></i></a>
+            <!-- <a href=""><i class="fab fa-github"></i></a> -->
+        </div>
+    </div>
+    <!-- Fin home -->
+
+    <!-- Contactame -->
+    <div class="contact">
+        <div class="imgBx">
+            <img src="img/img-burger.jpg" alt="rolf-login.jgp">
+        </div>
+        <div class="contentBx">
+            <div class="formBx">
+                <div class="back">
+                    <a class="back-from-contact"><i class="fas fa-angle-left fa-2x"></i></a>
+                </div>
+                <div class="title">
+                    <h2>Contáctanos</h2>
+                    <!-- <hr color="#e91e63" size="9"> -->
+                </div>
+                <form action="">
+                    <div class="inputBx">
+                        <span>Nombre</span>
+                        <input type="text">
+                    </div>
+                    <div class="inputBx">
+                        <span>Correo</span>
+                        <input type="email">
+                    </div>
+                    <div class="inputBx">
+                        <span>Mensaje</span>
+                        <textarea name="" id="" cols="30" rows="5"></textarea>
+                    </div>
+                    <!-- <div class="inputBx">
+                        <span>Archivo</span>
+                        <input type="file">
+                    </div> -->
+                    <div class="inputBx send">
+                        <input type="submit" value="Enviar">
+                    </div>
+                    <!-- <div class="inputBx">
+                        <p>Don't have an account?<a href=""> Sign up</a> </p>
+                    </div> -->
+                    <!-- <img src="img/tema portafolio.PNG" alt=""> -->
+                </form>
+                <div class="redes">
+                    <a href=""><i class="fab fa-facebook fa-2x facebook"></i></a>
+                    <a href=""><i class="fab fa-instagram fa-2x"></i></a>
+                    <a href=""><i class="fab fa-twitter fa-2x"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Fin contactame -->
+
+    <script>
+        var icon = document.getElementById("icon");
+        var blob = document.getElementById("blob");
+        var video = document.querySelector('.cover');
+
+        var spans = document.querySelectorAll('.contentBx .formBx span');
+        var inputs = document.querySelectorAll('input');
+        var textArea = document.querySelector('textarea');
+
+        var btnMenu = document.querySelector('.toggle');
+
+        // Botones de retorno
+        var backFromContact = document.querySelector('.back-from-contact');
+
+        // Areas de la pagina
+        var navigation = document.querySelector('.navigation');
+        var home = document.querySelector('.home');
+        var contact = document.querySelector('.contact');
+
+
+        // Botones de la barra del menu
+        var menuContact = document.querySelector('.menu-contact');
+        // var logo = document.getElementById("logo");
+
+        // Accion del boton para cambiar el tema
+        icon.onclick = function() {
+            // Cambiando tema.
+            document.body.classList.toggle("dark-mode");
+
+            // Cambiando aspecto del formulario contact.
+            spans.forEach(span => span.classList.toggle('dark-span'));
+            inputs.forEach(input => input.classList.toggle('dark-input-textarea'));
+            textArea.classList.toggle('dark-input-textarea');
+
+            if (document.body.classList.contains("dark-mode")) {
+                blob.src = "img/blob2.svg";
+                icon.src = "img/sun.png";
+
+                // logo.src = "img/trueno2.svg";
+            } else {
+                blob.src = "img/blob1.svg";
+                icon.src = "img/moon.png";
+
+                // logo.src = "img/trueno.svg";
+            }
+        }
+
+        //Accion al seleccionar el boton menu(toggle). 
+        btnMenu.onclick = function() {
+            // Reiniciar video. 
+            if (!navigation.classList.contains('active')) {
+                video.pause();
+                video.currentTime = 0;
+                video.load();
+            }
+            btnMenu.classList.toggle('active');
+            navigation.classList.toggle('active');
+            home.classList.toggle('active');
+        }
+
+        // Accion de los botones de la barra del menu.
+        menuContact.onclick = function() {
+            navigation.classList.remove('active');
+            contact.classList.add('active');
+        }
+
+        // Accion regresar.
+        backFromContact.onclick = function() {
+            contact.classList.remove('active');
+            navigation.classList.add('active');
+        }
+    </script>
+</body>
+
+</html>
